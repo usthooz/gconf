@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config version="1">
+    <Author>ooz</Author>
+    <Mysql>
+        <User>ooz</User>
+        <Password>123</Password>
+    </Mysql>
+</config>
