@@ -4,3 +4,14 @@
 [![GoDoc](http://godoc.org/github.com/usthooz/oozgconf?status.svg)](http://godoc.org/github.com/usthooz/oozgconf)
 
 Golang 多格式配置文件加载.
+
+### 功能
+1. Golang配置文件加载
+
+### 支持文件格式
+- .ini
+- .json
+- .toml
+- .xml
+- .yaml
+
