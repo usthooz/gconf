@@ -1,9 +1,8 @@
 package main
 
 import (
-	"github.com/usthooz/oozlog/go"
-
 	"github.com/usthooz/oozgconf"
+	"github.com/usthooz/oozlog/go"
 )
 
 type Config struct {
