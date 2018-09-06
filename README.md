@@ -5,6 +5,11 @@
 
 Golang 多格式配置文件加载.
 
+### install
+```
+$ go get -u github.com/usthooz/oozgconf
+```
+
 ### 功能
 1. Golang配置文件加载
 
