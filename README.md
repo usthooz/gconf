@@ -34,12 +34,12 @@ func main() {
 	var (
 		conf Config
 	)
-    <!-- new conf -->
+	// new conf object
 	ozconf := oozgconf.NewConf(&oozgconf.OozGconf{
 		ConfPath: "./config.json", // 可选，默认为./config/config.yaml
 		Subffix:  "", // 可选，如果不指定则自动解析文件名获取
 	})
-    <!-- get conf -->
+	// get config
 	err := ozconf.GetConf(&conf)
 	if err != nil {
 		uoozg.Errorf("GetConf Err: %v", err.Error())
