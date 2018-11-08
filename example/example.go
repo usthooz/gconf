@@ -23,7 +23,7 @@ func main() {
 	})
 	err := ozconf.GetConf(&conf)
 	if err != nil {
-		uoozg.Errorf("GetConf Err: %v", err.Error())
+		ozlog.Errorf("GetConf Err: %v", err.Error())
 	}
-	uoozg.Infof("Res: %v", conf)
+	ozlog.Infof("Res: %v", conf)
 }
