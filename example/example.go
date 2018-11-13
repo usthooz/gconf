@@ -6,11 +6,11 @@ import (
 )
 
 type Config struct {
-	Author string
+	Author string `yaml:"author"`
 	Mysql  struct {
-		User     string
-		Password string
-	}
+		User     string `yaml:"user"`
+		Password string `yaml:"password"`
+	} `yaml:"mysql"`
 }
 
 func main() {
@@ -18,7 +18,7 @@ func main() {
 		conf Config
 	)
 	ozconf := oozgconf.NewConf(&oozgconf.OozGconf{
-		ConfPath: "./config.json",
+		ConfPath: "./config.yaml",
 		Subffix:  "",
 	})
 	err := ozconf.GetConf(&conf)
