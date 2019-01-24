@@ -19,6 +19,11 @@ const (
 	XmlSub  string = "xml"
 )
 
+const (
+	// default config path
+	DefaultConfPath = "./config/config.yaml"
+)
+
 type OozGconf struct {
 	// ConfPath config file path->default: ./config/config.yaml
 	ConfPath string
@@ -29,7 +34,7 @@ type OozGconf struct {
 // NewConf new conf object
 func NewConf(confParam *OozGconf) *OozGconf {
 	if len(confParam.ConfPath) == 0 {
-		confParam.ConfPath = "./config/config.yaml"
+		confParam.ConfPath = DefaultConfPath
 	}
 	return confParam
 }
