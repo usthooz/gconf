@@ -1,4 +1,4 @@
-package oozgconf
+package gconf
 
 import (
 	"fmt"
@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	"github.com/BurntSushi/toml"
-	"github.com/usthooz/oozgconf/json"
-	"github.com/usthooz/oozgconf/xml"
-	"github.com/usthooz/oozgconf/yaml"
+	"github.com/usthooz/gconf/json"
+	"github.com/usthooz/gconf/xml"
+	"github.com/usthooz/gconf/yaml"
 )
 
 const (
@@ -24,7 +24,7 @@ const (
 	DefaultConfPath = "./config/config.yaml"
 )
 
-type OozGconf struct {
+type Gconf struct {
 	// ConfPath config file path->default: ./config/config.yaml
 	ConfPath string
 	// Subffix config file subffix
@@ -32,7 +32,7 @@ type OozGconf struct {
 }
 
 // NewConf new conf object
-func NewConf(confParam *OozGconf) *OozGconf {
+func NewConf(confParam *Gconf) *Gconf {
 	if len(confParam.ConfPath) == 0 {
 		confParam.ConfPath = DefaultConfPath
 	}
@@ -43,7 +43,7 @@ func NewConf(confParam *OozGconf) *OozGconf {
 	confpath: config file path->default: ./config/config.yaml
 	subffix: config file subffie->option
 */
-func (oozConf *OozGconf) GetConf(conf interface{}) error {
+func (oozConf *Gconf) GetConf(conf interface{}) error {
 	// read config file
 	bs, err := ioutil.ReadFile(oozConf.ConfPath)
 	if err != nil {

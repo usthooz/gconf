@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/usthooz/oozgconf"
-	"github.com/usthooz/oozlog/go"
+	"github.com/usthooz/gconf"
+	ozlog "github.com/usthooz/oozlog/go"
 )
 
 type Config struct {
@@ -17,7 +17,7 @@ func main() {
 	var (
 		conf Config
 	)
-	ozconf := oozgconf.NewConf(&oozgconf.OozGconf{
+	ozconf := gconf.NewConf(&gconf.Gconf{
 		ConfPath: "./config.yaml",
 		Subffix:  "",
 	})
