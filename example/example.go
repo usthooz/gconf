@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/swxctx/xlog"
 	"github.com/usthooz/gconf"
-	ozlog "github.com/usthooz/oozlog/go"
 )
 
 type Config struct {
@@ -23,7 +23,7 @@ func main() {
 	})
 	err := ozconf.GetConf(&conf)
 	if err != nil {
-		ozlog.Errorf("GetConf Err: %v", err.Error())
+		xlog.Errorf("GetConf Err: %v", err.Error())
 	}
-	ozlog.Infof("Res: %v", conf)
+	xlog.Infof("Res: %v", conf)
 }
